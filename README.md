@@ -1,4 +1,7 @@
 # CMake Utils
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cef8fb7317ce46e694a42389bffac2f2)](https://www.codacy.com/app/t-schuchort/cmake_utils?utm_source=github.com&utm_medium=referral&utm_content=tschuchortdev/cmake_utils&utm_campaign=badger)
+
 miscellaneous cmake utility functions
 
 
