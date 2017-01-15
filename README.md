@@ -1,4 +1,4 @@
-# cmake_utils
+# CMake Utils
 miscellaneous cmake utility functions
 
 
@@ -9,7 +9,7 @@ Replacement for CMake's `file` function.
 Options:
   - `RELATIVE_PATHS`: output relative paths into the list
   - `FOLLOW_SYMLINKS`: follow symlinks when traversing subdirectories
-  - `RECURSIVE': traverse subdirectories 
+  - `RECURSIVE`: traverse subdirectories 
   
 Arguments:
   - `INCLUDE`: list of file regex patterns that should be included
@@ -25,3 +25,24 @@ Example:
             INCLUDE ".*" 
             EXCLUDE "^.*icon.*\\.png$" "^.*image.*\\.img$")
   
+## fileGlob
+Find files that match a globbing pattern and add them to a list.
+Replacement for CMake's `file` function.
+
+Options:
+  - `RELATIVE_PATHS`: output relative paths into the list
+  - `FOLLOW_SYMLINKS`: follow symlinks when traversing subdirectories
+  - `RECURSIVE`: traverse subdirectories 
+  
+Arguments:
+  - `INCLUDE`: list of file glob patterns that should be included
+  - `EXCLUDE`: list of file glob patterns that should be excluded
+  
+Example:
+
+    fileGlob(
+            sources 
+            RECURSIVE 
+            INCLUDE "*.c*" "*.h*" 
+            EXCLUDE "test/*" "temp/*")
+    
