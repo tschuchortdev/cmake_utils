@@ -264,10 +264,11 @@ endfunction()
 # returns empty string if target property not found
 function(safe_get_target_property result target property)
     get_target_property(val ${target} ${property})
+
     if("${val}" STREQUAL "val-NOTFOUND")
-        set(${result} "")
+        set(${result} "" CACHE STRING "" FORCE)
     else()
-        set(${result} ${val})
+        set(${result} ${val} CACHE STRING "" FORCE)
     endif()
 endfunction()
 
