@@ -1,5 +1,7 @@
 # CMake Utils
-miscellaneous cmake utility functions
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/tschuchortdev/cmake_utils/issues)
+
+miscellaneous cmake utility functions for file gathering and object library dependency management
 
 
 ## fileRegex
