@@ -74,3 +74,36 @@ Example:
     add_executable(my_exe "")
     target_link_dependencies(my_exe PRIVATE my_obj)
   
+  ## append_target_property 
+`append_target_property` works similar to `set_target_properties` except it appends instead of overwrites and can only set one property at a time.
+   
+Arguments:
+  - target name
+  - property name
+  - value
+   
+Example:
+   
+    append_target_property(
+            my_target 
+            MY_PROPERTY_NAME 
+            "this will be appended to MY_PROPERTY_NAME")
+            
+## safe_get_target_property
+`safe_get_target_property` works similar to `get_target_property` except it returns an empty string when the property is not found.
+
+
+Arguments: 
+  - name of the variable that will contain the result 
+  - target name 
+  - property name 
+
+
+Example:
+    
+    safe_get_target_property(
+            my_target_dependencies
+            my_target
+            DEPENDENCIES)
+            
+    some_other_function("${other_target_dependencies};${my_target_dependencies}")      
